@@ -2,10 +2,71 @@
 <html>
 <head>
     <title>Form Pendaftaran</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("wp1932800-walter-white-wallpapers.jpg");
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00bcd4;
+            width: 90%;
+            max-width: 1000px;
+            opacity: 90%
+        }
+        fieldset {
+            border: 2px solid #00bcd4;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        legend {
+            color: #00bcd4;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 8px;
+        }
+        input, textarea, select {
+            background: #333;
+            color: #ffffff;
+            border: 1px solid #00bcd4;
+            padding: 8px;
+            border-radius: 5px;
+            width: 100%;
+        }
+        input[type="radio"] {
+            width: auto;
+        }
+        input[type="submit"], input[type="reset"] {
+            background: #00bcd4;
+            border: none;
+            padding: 10px 15px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background: #008c9e;
+        }
+    </style>
 </head>
 <body>
-    <h2>Form Pendaftaran</h2>
     <form action="" method="post">
+        <h2 id="Judul" style="text-align: center; color: #00bcd4;">Form Pendaftaran</h2>
         <table>
             <tr>
                 <td>
@@ -14,32 +75,26 @@
                         <table>
                             <tr>
                                 <td>Nama Lengkap</td>
-                                <td><span>: </span></td>
                                 <td><input type="text" name="nama_lengkap" required></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td><span>: </span></td>
                                 <td><input type="email" name="email" required></td>
                             </tr>
                             <tr>
                                 <td>Nomor Telepon</td>
-                                <td><span>: </span></td>
                                 <td><input type="tel" name="nomor_telepon" required></td>
                             </tr>
                             <tr>
                                 <td>Alamat Lengkap</td>
-                                <td><span>: </span></td>
-                                <td><textarea name="alamat" rows=7 required></textarea></td>
+                                <td><textarea name="alamat" rows=3 required></textarea></td>
                             </tr>
                             <tr>
                                 <td>Tanggal Lahir</td>
-                                <td><span>: </span></td>
                                 <td><input type="date" name="tanggal_lahir" required></td>
                             </tr>
                             <tr>
                                 <td>Jenis Kelamin</td>
-                                <td><span>: </span></td>
                                 <td>
                                     <input type="radio" name="jenis_kelamin" value="Laki-laki" required> Laki-laki
                                     <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
@@ -47,9 +102,7 @@
                             </tr>
                             <tr>
                                 <td>Agama</td>
-                                <td><span>: </span></td>
                                 <td>
-                               
                                     <select name="agama" required>
                                         <option value="Islam">Islam</option>
                                         <option value="Kristen">Kristen</option>
@@ -62,9 +115,7 @@
                             </tr>
                             <tr>
                                 <td>Pendidikan Terakhir</td>
-                                <td><span>: </span></td>
                                 <td>
-                                
                                     <input type="radio" name="pendidikan" value="SMA" required> SMA
                                     <input type="radio" name="pendidikan" value="D3"> D3
                                     <input type="radio" name="pendidikan" value="S1"> S1
@@ -72,12 +123,10 @@
                             </tr>
                             <tr>
                                 <td>Foto</td>
-                                <td><span>: </span></td>
                                 <td><input type="file" name="foto" accept="image/*" required></td>
                             </tr>
                             <tr>
                                 <td>CV</td>
-                                <td><span>: </span></td>
                                 <td><input type="file" name="cv" accept=".pdf,.doc,.docx" required></td>
                             </tr>
                         </table>
@@ -89,42 +138,34 @@
                         <table>
                             <tr>
                                 <td>Nama Ayah</td>
-                                <td><span>: </span></td>
                                 <td><input type="text" name="nama_ayah" required></td>
                             </tr>
                             <tr>
                                 <td>Pekerjaan Ayah</td>
-                                <td><span>: </span></td>
                                 <td><input type="text" name="pekerjaan_ayah" required></td>
                             </tr>
                             <tr>
                                 <td>Alamat Ayah</td>
-                                <td><span>: </span></td>
-                                <td><textarea name="alamat_ayah" rows=5 required></textarea></td>
+                                <td><textarea name="alamat_ayah" rows=3 required></textarea></td>
                             </tr>
                             <tr>
                                 <td>Nomor Telepon Ayah</td>
-                                <td><span>: </span></td>
                                 <td><input type="tel" name="nomor_ayah" required></td>
                             </tr>
                             <tr>
                                 <td>Nama Ibu</td>
-                                <td><span>: </span></td>
                                 <td><input type="text" name="nama_ibu" required></td>
                             </tr>
                             <tr>
                                 <td>Pekerjaan Ibu</td>
-                                <td><span>: </span></td>
                                 <td><input type="text" name="pekerjaan_ibu" required></td>
                             </tr>
                             <tr>
                                 <td>Alamat Ibu</td>
-                                <td><span>: </span></td>
-                                <td><textarea name="alamat_ibu" required rows=5></textarea></td>
+                                <td><textarea name="alamat_ibu" required rows=3></textarea></td>
                             </tr>
                             <tr>
                                 <td>Nomor Telepon Ibu</td>
-                                <td><span>: </span></td>
                                 <td><input type="tel" name="nomor_ibu" required></td>
                             </tr>
                             <tr>
